@@ -28,3 +28,6 @@ Rating my own solutions:
 **day 6:** (this one felt too easy)  
     Part 1: 7/10  
     Part 2: 7/10  
+
+**day 7:**
+    Part 1: 9/10  

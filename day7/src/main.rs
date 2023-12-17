@@ -130,7 +130,7 @@ impl PartialOrd for Bid {
 
 impl PartialEq for Bid {
     fn eq(&self, other: &Self) -> bool {
-        self.get_hand_value() == other.get_hand_value()
+        self.cmp(other) == Ordering::Equal
     }
 }
 
