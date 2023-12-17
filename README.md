@@ -23,8 +23,8 @@ Rating my own solutions:
 	Part 1: 7/10  
 	Part 2: 0/10 (need to come back to this)  
   
-henceforth no more shit code
+**henceforth no more shit code**  
 
-**day 6:** (this one felt too easy) 
+**day 6:** (this one felt too easy)  
     Part 1: 7/10  
     Part 2: 7/10  

@@ -51,11 +51,7 @@ fn process_races(races: &Vec<Race>) -> i64 {
         let mut count: i64 = 0;
         let mut current_speed = 0;
         for i in 1..race.time - 1 {
-            if i >= race.time {
-                break;
-            }
             current_speed += 1;
-
             let distance = current_speed * (race.time - i);
             if distance > race.distance {
                 count += 1;
