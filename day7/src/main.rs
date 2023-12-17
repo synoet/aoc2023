@@ -44,12 +44,12 @@ impl From<&str> for Bid {
 }
 
 enum HandType {
-    FiveOfAKind = 100,
-    FourOfAKind = 75,
-    FullHouse = 50,
-    ThreeOfAKind = 25,
-    TwoPair = 12,
-    OnePair = 6,
+    FiveOfAKind = 7,
+    FourOfAKind = 6,
+    FullHouse = 5,
+    ThreeOfAKind = 4,
+    TwoPair = 3,
+    OnePair = 2,
     HighCard = 1,
 }
 
