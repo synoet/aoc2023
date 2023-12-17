@@ -18,7 +18,8 @@ fn parse_line_with_spaces(line: &str) -> Vec<i64> {
 fn parse_line_wihout_spaces(line: &str) -> Vec<i64> {
     vec![line.split(":").collect::<Vec<&str>>()[1]
         .replace(" ", "")
-        .parse::<i64>().unwrap()]
+        .parse::<i64>()
+        .unwrap()]
 }
 
 fn parse_line(line: &str, ignore_spaces: bool) -> Vec<i64> {
@@ -55,7 +56,12 @@ fn process_races(races: &Vec<Race>) -> i64 {
             let distance = current_speed * (race.time - i);
             if distance > race.distance {
                 count += 1;
-                println!("charged for {} seconds, will travel {}m in remaining {} seconds", i, distance, (race.time - i));
+                println!(
+                    "charged for {} seconds, will travel {}m in remaining {} seconds",
+                    i,
+                    distance,
+                    (race.time - i)
+                );
             }
         }
 
@@ -77,7 +83,6 @@ fn part_two() {
     let races = parse_document(&content, true);
     let answer = process_races(&races);
     println!("answer: {}", answer);
-
 }
 
 fn main() {
