@@ -115,7 +115,7 @@ impl Ord for Bid {
                     }
                 }
                 Ordering::Equal
-            },
+            }
             Ordering::Less => Ordering::Less,
             Ordering::Greater => Ordering::Greater,
         }
@@ -138,13 +138,14 @@ impl Eq for Bid {}
 
 fn part_one() -> i64 {
     let content = read_to_string("input.txt").unwrap();
-
     let mut bids = content.lines().map(|s| Bid::from(s)).collect::<Vec<Bid>>();
-
     bids.sort_by(|a, b| a.cmp(b));
-
-    dbg!(&bids.iter().map(|b| b.value).collect::<Vec<i32>>());
-    bids.iter().enumerate().map(|(i, b)| (b.value as usize  * (i + 1)) as i64).collect::<Vec<i64>>().iter().sum()
+    bids.iter()
+        .enumerate()
+        .map(|(i, b)| (b.value as usize * (i + 1)) as i64)
+        .collect::<Vec<i64>>()
+        .iter()
+        .sum()
 }
 
 fn main() {
